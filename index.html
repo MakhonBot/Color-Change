@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Color Changing</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p id="p">I want my color to change. Do you know how to do that? 🤔?</p>
+        <br>
+        <button onclick="change()">Change color!</button>
+        <script>
+            function pickcolor() {
+                let red = "#ff0000";
+                let orange = "#ffa500";
+                let yellow = "#ffff00";
+                let green = "#00ff00";
+                let blue = "#0000ff";
+                let colors = [red, orange, yellow, green, blue];
+                let randomIndex = Math.floor(Math.random() * colors.length);
+                return colors[randomIndex];
+            }
+            let div = document.getElementById ('p');
+            function change() {
+                div.innerHTML = "YAY!"
+                div.style.color = pickcolor();
+            }
+        </script>
+    </body>
+</html>
